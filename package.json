@@ -1,0 +1,33 @@
+{
+  "name": "salon-service",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --inspect --exec babel-node server.js",
+    "db:up": "sequelize db:migrate",
+    "db:down": "sequelize db:migrate:undo",
+    "db:down:all": "sequelize db:migrate:undo:all",
+    "db:insert": "sequelize db:seed:all",
+    "db:delete": "sequelize db:seed:undo",
+    "db:delete:all": "sequelize db:seed:undo:all"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.3",
+    "sequelize": "^6.33.0",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.1"
+  }
+}
